@@ -1,6 +1,6 @@
-# Luke's build of st - the simple (suckless) terminal
+# st - the simple (suckless) terminal
 
-The [suckless terminal (st)](https://st.suckless.org/) with some additional features that make it literally the best terminal emulator ever:
+[suckless terminal (st)](https://st.suckless.org/)
 
 ## Unique features (using dmenu)
 
@@ -10,10 +10,9 @@ The [suckless terminal (st)](https://st.suckless.org/) with some additional feat
 
 ## Bindings for
 
-+ **scrollback** with `alt-↑/↓` or `alt-pageup/down` or `shift` while scrolling the mouse
-+ OR **vim-bindings**: scroll up/down in history with `alt-k` and `alt-j`. Faster with `alt-u`/`alt-d`.
-+ **zoom/change font size**: same bindings as above, but holding down shift as well. `alt-home` returns to default
-+ **copy text** with `alt-c`, **paste** is `alt-v` or `shift-insert`
++ **scrollback** with `ctrl-j/k, ctrl-d/u
++ **zoom/change font size**: ctrl-arrow up/down
++ **copy text** with `alt-y`, **paste** is `alt-p` or `shift-insert`
 
 ## Pretty stuff
 
@@ -28,22 +27,6 @@ The [suckless terminal (st)](https://st.suckless.org/) with some additional feat
 + Scrollback
 + font2
 + updated to latest version 0.8.2
-
-## Installation for newbs
-
-```
-git clone https://github.com/LukeSmithxyz/st
-cd st
-sudo make install
-```
-
-Users of Arch-based distros can also install it from the AUR as [st-luke-git](https://aur.archlinux.org/packages/st-luke-git/).
-
-Obviously, `make` is required to build. `fontconfig` is required for the default build, since it asks `fontconfig` for your system monospace font.  It might be obvious, but `libX11` and `libXft` are required as well. Chances are, you have all of this installed already.
-
-On OpenBSD, be sure to edit `config.mk` first and remove `-lrt` from the `$LIBS` before compiling.
-
-Be sure to have a composite manager (`xcompmgr`, `picom`, etc.) running if you want transparency.
 
 ## How to configure dynamically with Xresources
 
@@ -75,8 +58,3 @@ Note that when you run `wal`, it will negate the transparency of existing window
 If st crashes when viewing emojis, install [libxft-bgra](https://aur.archlinux.org/packages/libxft-bgra/) from the AUR.
 
 Note that some special characters may appear truncated if too wide. You might want to manually set your prefered emoji/special character font to a lower size in the `config.h` file to avoid this. By default, JoyPixels is used at a smaller size than the usual text.
-
-## Contact
-
-- Luke Smith <luke@lukesmith.xyz>
-- [https://lukesmith.xyz](https://lukesmith.xyz)
