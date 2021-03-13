@@ -62,7 +62,7 @@ static unsigned int blinktimeout = 800;
  * improves terminal performance while not reducing functionality to those
  * whom need XIM support.
  */
-int ximspot_update_interval = 1000;
+int ximspot_update_interval = 500;
 
 /*
  * thickness of underline and bar cursors
